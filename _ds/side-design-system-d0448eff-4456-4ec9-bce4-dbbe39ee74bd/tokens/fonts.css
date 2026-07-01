@@ -1,0 +1,15 @@
+/* ============================================================
+   SIDE · Fonts
+   ------------------------------------------------------------
+   Distinctive, less-common system — deliberately NOT Inter/Helvetica.
+     · Display → Syne            (avant-garde, structural, unusual
+                                  widths — the "estrutura" voice)
+     · UI/body → Schibsted Grotesk (clean modern grotesque, uncommon)
+     · Data    → Martian Mono    (geometric monospace, signature
+                                  metrics — the "performance" voice)
+   No serif: the brand reads sharper and more contemporary without it.
+   Brand fonts (Suisse Int'l / Canela) are commercial and not bundled;
+   swap @font-face here when licensed files are available.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Schibsted+Grotesk:wght@400;500;600;700&family=Martian+Mono:wght@400;500;600&display=swap');

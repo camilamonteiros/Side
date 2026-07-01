@@ -1,0 +1,138 @@
+/* ============================================================
+   SIDE · Color tokens
+   Dualidade: estrutura (gold) + fluidez (green), over ink & cream.
+   :root = LIGHT (cream premium). [data-theme="dark"] = DARK (luxo).
+   ============================================================ */
+
+:root {
+  /* ---- Brand base palette (immutable) ---- */
+  --side-ink:        #1A1A1A;  /* near-black, primary ink (light) */
+  --side-black:      #080B14;  /* blue-black, dark canvas         */
+  --side-green:      #1F3D36;  /* deep forest — fluidez           */
+  --side-gold:       #C8A96A;  /* warm gold — estrutura           */
+  --side-cream:      #F7F4EF;  /* warm paper                      */
+  --side-cream-2:    #F5F0E8;  /* alt cream (dark-board paper)    */
+
+  /* ---- Ink ramp (warm neutral) ---- */
+  --ink-900: #0E0E0E;
+  --ink-800: #1A1A1A;
+  --ink-700: #2A2A28;
+  --ink-600: #3D3D39;
+  --ink-500: #57574F;
+  --ink-400: #7A796F;
+  --ink-300: #A3A199;
+  --ink-200: #C9C6BD;
+  --ink-100: #E4E1D8;
+  --ink-050: #F1EEE6;
+
+  /* ---- Green ramp (fluidez) ---- */
+  --green-900: #112620;
+  --green-800: #16302A;
+  --green-700: #1F3D36;
+  --green-600: #2A4E45;
+  --green-500: #3A6356;
+  --green-400: #5A8478;
+  --green-300: #8AACA2;
+  --green-200: #BCD2CB;
+  --green-100: #E2ECE8;
+
+  /* ---- Gold ramp (estrutura) ---- */
+  --gold-900: #8A7038;
+  --gold-800: #A98B4E;
+  --gold-700: #B8965A;
+  --gold-600: #C8A96A;  /* brand gold */
+  --gold-500: #D4B97F;
+  --gold-400: #DEC894;
+  --gold-300: #E8D9B8;
+  --gold-200: #F1E8D2;
+  --gold-100: #F8F2E6;
+
+  /* ---- Gold gradients (the gold is metallic, never flat) ---- */
+  --grad-gold:        linear-gradient(135deg, #E3CF9E 0%, #C8A96A 44%, #9C7C3C 100%); /* @kind color */
+  --grad-gold-soft:   linear-gradient(135deg, #DEC894 0%, #C8A96A 100%); /* @kind color */
+  --grad-gold-bright: linear-gradient(135deg, #F0E2BE 0%, #D4B97F 40%, #B8965A 100%); /* @kind color */
+  /* Dualidade sweep — estrutura (gold) flowing into fluidez (green) */
+  --grad-dualidade:   linear-gradient(135deg, #E3CF9E 0%, #C8A96A 28%, #6E8B6F 64%, #1F3D36 100%); /* @kind color */
+  --grad-aura:        radial-gradient(120% 120% at 18% 12%, rgba(200,169,106,.55) 0%, rgba(200,169,106,0) 42%), radial-gradient(130% 130% at 88% 78%, rgba(31,61,54,.85) 0%, rgba(31,61,54,0) 50%); /* @kind color */
+
+  /* ---- Blue-black canvas ramp (dark luxo) ---- */
+  --night-950: #050810;
+  --night-900: #080B14;
+  --night-850: #0C1019;
+  --night-800: #12161F;
+  --night-700: #1B2029;
+  --night-600: #262C36;
+  --night-500: #353C47;
+
+  /* ---- Cream / paper ramp ---- */
+  --paper-000: #FFFFFF;
+  --paper-050: #FBF9F5;
+  --paper-100: #F7F4EF;
+  --paper-200: #F1EDE4;
+  --paper-300: #E8E2D6;
+  --paper-400: #DAD3C4;
+
+  /* ---- Semantic status ---- */
+  --positive: #3A6356;   /* growth / on-track (green family) */
+  --positive-soft: #E2ECE8;
+  --attention: #B8965A;  /* gold caution */
+  --attention-soft: #F8F2E6;
+  --critical: #9B4A3F;   /* muted terracotta — never neon */
+  --critical-soft: #F3E6E2;
+  --info: #3F5A78;
+  --info-soft: #E6ECF3;
+
+  /* ============ LIGHT THEME (default) ============ */
+  --bg:            var(--paper-100);
+  --bg-sunken:     var(--paper-200);
+  --bg-raised:     var(--paper-050);
+  --surface:       var(--paper-000);
+  --surface-2:     var(--paper-050);
+  --surface-inset: var(--paper-200);
+
+  --text:          var(--ink-800);
+  --text-muted:    var(--ink-500);
+  --text-subtle:   var(--ink-400);
+  --text-inverse:  var(--side-cream-2);
+  --text-on-gold:  var(--ink-900);
+  --text-on-green: var(--side-cream-2);
+
+  --accent:        var(--side-gold);
+  --accent-strong: var(--gold-700);
+  --accent-ink:    var(--green-700);
+
+  --border:        var(--ink-100);
+  --border-strong: var(--ink-200);
+  --hairline:      rgba(26, 26, 26, 0.08);
+
+  --focus-ring:    var(--green-500);
+  --overlay:       rgba(14, 14, 14, 0.46);
+}
+
+/* ============ DARK THEME (luxo) ============ */
+[data-theme="dark"] {
+  --bg:            var(--night-900);
+  --bg-sunken:     var(--night-950);
+  --bg-raised:     var(--night-850);
+  --surface:       var(--night-800);
+  --surface-2:     var(--night-700);
+  --surface-inset: var(--night-850);
+
+  --text:          var(--side-cream-2);
+  --text-muted:    #A9A498;
+  --text-subtle:   #6F6C62;
+  --text-inverse:  var(--ink-900);
+  --text-on-gold:  var(--ink-900);
+  --text-on-green: var(--side-cream-2);
+
+  --accent:        var(--side-gold);
+  --accent-strong: var(--gold-500);
+  --accent-ink:    var(--gold-600);
+
+  --border:        rgba(245, 240, 232, 0.10);
+  --border-strong: rgba(245, 240, 232, 0.18);
+  --hairline:      rgba(245, 240, 232, 0.07);
+
+  --focus-ring:    var(--gold-500);
+  --overlay:       rgba(5, 8, 16, 0.66);
+}

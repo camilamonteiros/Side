@@ -1,0 +1,34 @@
+/* ============================================================
+   SIDE · Spacing & layout tokens — 4px base, generous luxury rhythm
+   ============================================================ */
+
+:root {
+  --space-0:   0;
+  --space-px:  1px;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-7:   32px;
+  --space-8:   40px;
+  --space-9:   48px;
+  --space-10:  64px;
+  --space-11:  80px;
+  --space-12:  104px;
+  --space-13:  136px;
+
+  /* Semantic */
+  --gutter:       var(--space-6);
+  --section-y:    var(--space-12);
+  --card-pad:     var(--space-6);
+  --field-pad-x:  var(--space-4);
+  --field-pad-y:  var(--space-3);
+
+  /* Layout widths */
+  --container:    1200px;
+  --container-wide: 1440px;
+  --measure:      66ch;
+  --sidebar-w:    264px;
+}

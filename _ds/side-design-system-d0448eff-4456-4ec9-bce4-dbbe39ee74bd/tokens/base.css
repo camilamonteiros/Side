@@ -1,0 +1,107 @@
+/* ============================================================
+   SIDE · Base reset & brand primitives
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+::selection { background: color-mix(in srgb, var(--side-gold) 32%, transparent); color: var(--text); }
+
+a { color: inherit; text-decoration: none; }
+
+h1,h2,h3,h4,h5,h6,p { margin: 0; }
+
+:focus-visible { outline: none; box-shadow: var(--ring); }
+
+/* ---- Brand text primitives ---- */
+.side-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-tight);
+}
+
+.side-eyebrow,
+.side-label {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-2xs);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.side-wordmark {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+}
+
+/* Tabular numerals for any data context */
+.side-data { font-family: var(--font-data); font-feature-settings: "tnum" 1; }
+.tnum { font-variant-numeric: tabular-nums; }
+
+@keyframes side-spin { to { transform: rotate(360deg); } }
+@keyframes side-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes side-rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* Organic / fluid motion — the unexpected, dynamic side of SIDE */
+@keyframes side-morph {
+  0%, 100% { border-radius: 62% 38% 54% 46% / 56% 52% 48% 44%; }
+  33%      { border-radius: 38% 62% 40% 60% / 46% 38% 62% 54%; }
+  66%      { border-radius: 54% 46% 64% 36% / 38% 58% 42% 62%; }
+}
+@keyframes side-float {
+  0%, 100% { transform: translate3d(0,0,0) rotate(0deg); }
+  50%      { transform: translate3d(0,-14px,0) rotate(3deg); }
+}
+@keyframes side-aura-drift {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50%      { transform: translate3d(4%,-3%,0) scale(1.08); }
+}
+/* Mesh-gradient corner blobs — each drifts on its own path, anchored to a corner */
+@keyframes side-mesh-a {
+  0%,100% { transform: translate3d(0,0,0) scale(1); }
+  33%     { transform: translate3d(18%,12%,0) scale(1.14); }
+  66%     { transform: translate3d(8%,26%,0) scale(0.96); }
+}
+@keyframes side-mesh-b {
+  0%,100% { transform: translate3d(0,0,0) scale(1); }
+  40%     { transform: translate3d(-20%,-10%,0) scale(1.12); }
+  70%     { transform: translate3d(-8%,-24%,0) scale(0.95); }
+}
+@keyframes side-mesh-c {
+  0%,100% { transform: translate3d(0,0,0) scale(1); }
+  50%     { transform: translate3d(-22%,20%,0) scale(1.18); }
+}
+@keyframes side-mesh-d {
+  0%,100% { transform: translate3d(0,0,0) scale(1); }
+  50%     { transform: translate3d(24%,-18%,0) scale(1.1); }
+}
+@keyframes side-sheen {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

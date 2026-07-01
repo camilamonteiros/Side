@@ -1,0 +1,24 @@
+/* ============================================================
+   SIDE · Motion — calm, controlled, premium. No bounce, no flash.
+   Easing favors confident ease-out; durations are unhurried.
+   ============================================================ */
+
+:root {
+  --dur-instant: 80ms;  /* @kind other */
+  --dur-fast:    150ms; /* @kind other */
+  --dur-base:    240ms; /* @kind other */
+  --dur-slow:    420ms; /* @kind other */
+  --dur-slower:  680ms; /* @kind other */
+
+  /* Confident, refined easing (no overshoot) */
+  --ease-out:     cubic-bezier(0.22, 0.61, 0.36, 1);  /* @kind other */
+  --ease-in-out:  cubic-bezier(0.65, 0.05, 0.36, 1);  /* @kind other */
+  --ease-emphatic:cubic-bezier(0.16, 1, 0.30, 1);  /* @kind other */
+  --ease-standard:cubic-bezier(0.4, 0, 0.2, 1);  /* @kind other */
+
+  --transition-control: color var(--dur-fast) var(--ease-out),
+                        background-color var(--dur-fast) var(--ease-out),
+                        border-color var(--dur-fast) var(--ease-out),
+                        box-shadow var(--dur-fast) var(--ease-out),
+                        transform var(--dur-fast) var(--ease-out); /* @kind other */
+}

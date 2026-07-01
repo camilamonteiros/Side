@@ -1,0 +1,55 @@
+/* ============================================================
+   SIDE · Typography tokens
+   Display/elegant = Cormorant (Canela). UI/precise = Hanken (Suisse).
+   Data = JetBrains Mono. Brand voice: wide-tracked caps for labels.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-serif:   'Syne', 'Schibsted Grotesk', system-ui, sans-serif;  /* kept alias; now the display sans */
+  --font-sans:    'Schibsted Grotesk', 'Suisse Int\'l', system-ui, Arial, sans-serif;
+  --font-mono:    'Martian Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Semantic family aliases */
+  --font-display: 'Syne', 'Schibsted Grotesk', system-ui, sans-serif;   /* hero, headlines, big numbers */
+  --font-ui:      var(--font-sans);     /* product UI, body, labels     */
+  --font-data:    var(--font-mono);     /* metrics, timers, tables      */
+
+  /* ---- Type scale (1.250 major-third-ish, tuned) ---- */
+  --text-2xs:  11px;
+  --text-xs:   12px;
+  --text-sm:   13px;
+  --text-base: 15px;
+  --text-md:   17px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  30px;
+  --text-3xl:  38px;
+  --text-4xl:  48px;
+  --text-5xl:  62px;
+  --text-6xl:  82px;
+  --text-7xl:  110px;
+
+  /* ---- Weights ---- */
+  --fw-light:   300;  /* @kind other */
+  --fw-regular: 400;  /* @kind other */
+  --fw-medium:  500;  /* @kind other */
+  --fw-semibold:600;  /* @kind other */
+  --fw-bold:    700;  /* @kind other */
+  --fw-black:   800;  /* @kind other */
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.05;  /* @kind other */
+  --lh-snug:    1.18;  /* @kind other */
+  --lh-display: 1.08;  /* @kind other */
+  --lh-normal:  1.5;   /* @kind other */
+  --lh-relaxed: 1.65;  /* @kind other */
+
+  /* ---- Letter spacing ---- */
+  --ls-tighter: -0.03em;  /* @kind other */
+  --ls-tight:   -0.015em; /* @kind other */
+  --ls-normal:  0em;      /* @kind other */
+  --ls-wide:    0.08em;   /* @kind other */
+  --ls-wider:   0.18em;   /* @kind other */
+  --ls-widest:  0.34em;   /* @kind other */
+}
